@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HW_ADO.NET_S
 {
-    class Employee
+    public class Employee
     {
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<Department> Departments { get; set; }
     }
 }
